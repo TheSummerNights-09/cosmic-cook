@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmic Cook</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #4b0082, #000080);
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+  }
+  button {
+    padding: 20px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    background: #800080;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  button:hover {
+    background: #a000a0;
+  }
+  .result {
+    margin-top: 30px;
+    font-size: 20px;
+    min-height: 40px;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Cosmic Cook ✨</h1>
+  <p>Hit the button. Unleash interstellar culinary chaos.</p>
+  <button onclick="cook()">Cook</button>
+  <div class="result" id="result">Initiating cosmic cook sequence...</div>
+</div>
+<script>
+const actions = [
+  'Stirring intergalactic soup...',
+  'Sautéing stardust...',
+  'Marinating black holes...',
+  'Whisking plasma with swagger...',
+  'Grilling nebulas to perfection...',
+  'Seasoning the void with chaos...'
+];
+
+function cook() {
+  const random = actions[Math.floor(Math.random() * actions.length)];
+  document.getElementById('result').innerText = random;
+}
+</script>
+</body>
+</html>
